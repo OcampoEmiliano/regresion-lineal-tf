@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción con TensorFlow.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.2.0/tf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.9.0/plotly.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Predicción con Regresión lineal simple</h1>
+    
+    <div class="container">
+        <button id="entrenarBtn">Entrenar Modelo</button>
+    </div>
+    
+    <hr>
+    
+    <h2>Gráfica de Pérdida durante el Entrenamiento</h2>
+    <div class="card">
+        <div id="perdidaChart" style="width:100%; height:400px;"></div>
+        <div id="infoLoss"></div>
+    </div>
+    
+    <hr>
+    
+    <h2>Predicción</h2>
+    <div class="container">
+        <div>Valores de X (separados por comas):</div>
+        <input type="text" id="valoresX" placeholder="Ej: 10, 20, 30">
+        <button id="predecirBtn">Predecir</button>
+    </div>
+    
+    <div class="card">
+        <div id="estadoModelo">Estado: Modelo no entrenado</div>
+        <h3>Resultados:</h3>
+        <div id="resultados"></div>
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
